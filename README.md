@@ -31,7 +31,7 @@ The app is ready to be backed up!
 
 ## Configure OADP and a Backup
 
-First, create a new Object Bucket Clain:
+First, create a new Object Bucket Claim:
 
 ```
 oc apply -f oadp-dpa/bucket-claim.yaml
