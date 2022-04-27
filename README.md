@@ -167,3 +167,16 @@ time="2022-04-26T17:27:35Z" level=info msg="[pvc-restore] Returning pvc object a
 time="2022-04-26T17:27:35Z" level=info msg="Attempting to restore PersistentVolumeClaim: demo-app-data" logSource="pkg/restore/restore.go:1264" restore=openshift-adp/demo-restore
 time="2022-04-26T17:27:35Z" level=info msg="Restored 2 items out of an estimated total of 30 (estimate will change throughout the restore)" logSource="pkg/restore/restore.go:664" name=demo-app-data namespace=demo-app progress= resource=persistentvolumeclaims restore=openshift-adp/demo-restore
 ```
+
+
+CLI:
+
+```
+velero backup create abackup --default-volumes-to-restic=true --include-namespaces demo-app5
+
+velero backup create newdemo                                --default-volumes-to-restic=true \
+--include-namespaces demo-app2
+
+
+velero restore create --from-backup abackup     
+```

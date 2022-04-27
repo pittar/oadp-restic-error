@@ -4,5 +4,4 @@ metadata:
   name: demo-restore
   namespace: openshift-adp
 spec:
-  backupName: demo-backup 
-  restorePVs: true
+  backupName: demo-backup
